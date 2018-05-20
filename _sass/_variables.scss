@@ -19,9 +19,37 @@ $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
 
-// Mobile breakpoints
-@mixin mobile {
-  @media screen and (max-width: 640px) {
+// < 576px
+@mixin xs {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+// >= 576px
+@mixin sm {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+// >= 768px
+@mixin md {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+// >= 992px
+@mixin lg {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+// >= 1200px
+@mixin xl {
+  @media screen and (max-width: 1200px) {
     @content;
   }
 }

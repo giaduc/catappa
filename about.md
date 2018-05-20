@@ -4,12 +4,14 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I'm Duc, a programmer interested in HTML, CSS, JS and all about the Web.
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+### Some framework I used
+- Bootstrap
+- React
+- Angular
+- ...
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[lgduc1913@gmail.com](mailto:lgduc1913@gmail.com)
