@@ -35,17 +35,9 @@ h6 {
   color: $darkerGray;
   font-weight: bold;
   line-height: 1.7;
-  margin: 1em 0 15px;
   padding: 0;
   @include sm {
     line-height: 1.4;
-  }
-}
-
-h1 {
-  font-size: 30px;
-  a {
-    color: inherit;
   }
 }
 
