@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     {% include meta.html %}
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
 
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bulma CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+
+    <!-- Fontawesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
@@ -22,17 +27,15 @@
       <div class="navbar-brand">
         <a class="navbar-item" href="{{ site.baseurl }}/">{{ site.name }}</a>
     
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
 
-      <div class="navbar-menu">
-        <div class="navbar-start">
-
-        </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-start"></div>
         <div class="navbar-end">
           <a href="{{ site.baseurl }}/" class="navbar-item">Blog</a>
           <a href="{{ site.baseurl }}/about" class="navbar-item">About</a>
@@ -57,5 +60,14 @@
     </footer>
 
     {% include analytics.html %}
+    <script>
+      $('.navbar-burger').on('click', (e) => {
+        // toggle burger is-active
+        $(e.currentTarget).toggleClass('is-active');
+
+        // toggle navbar-menu
+        $('#navMenu').toggleClass('is-active');
+      })
+    </script>
   </body>
 </html>
