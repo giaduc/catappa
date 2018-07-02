@@ -232,7 +232,9 @@ img {
 //
 // .main
 //
-
+#main-section {
+  min-height: calc(100vh - 191px - 3.25rem);
+}
 .post {
   blockquote {
     margin: 1.8em .8em;
