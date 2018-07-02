@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="{{ site.baseurl }}/">{{ site.name }}</a>
     
@@ -42,7 +42,11 @@
 
     <div class="section">
       <div id="main" class="container" role="main">
-        {{ content }}
+        <div class="columns">
+          <div class="column is-9">
+            {{ content }}
+          </div>
+        </div>
       </div>
     </div>
 
