@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<!-- I'm Duc, a programmer interested in HTML, CSS, JS and all about the Web.
+I'm Duc, a programmer interested in HTML, CSS, JS and all about the Web.
 
 ### Some framework I used
 - Bootstrap
@@ -12,6 +12,6 @@ permalink: /about/
 - Angular
 - ...
 
-### Contact me -->
+### Contact me
 
 [lgduc1913@gmail.com](mailto:lgduc1913@gmail.com)

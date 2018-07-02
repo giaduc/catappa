@@ -9,7 +9,7 @@
     <![endif]-->
 
     <!-- jQuery CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- Bulma CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
@@ -24,32 +24,41 @@
 
   <body>
     <nav class="navbar is-light" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="{{ site.baseurl }}/">{{ site.name }}</a>
-    
-        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
-      <div class="navbar-menu" id="navMenu">
-        <div class="navbar-start"></div>
-        <div class="navbar-end">
-          <a href="{{ site.baseurl }}/" class="navbar-item">Blog</a>
-          <a href="{{ site.baseurl }}/about" class="navbar-item">About</a>
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="{{ site.baseurl }}/">{{ site.name }}</a>
+      
+          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+  
+        <div class="navbar-menu" id="navMenu">
+          <div class="navbar-start">
+            <div class="navbar-item">
+              <div class="field">
+                <div class="control has-icons-right">
+                  <input id="search" type="text" class="input is-rounded" placeholder="search...">
+                  <span class="icon is-right">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-end">
+            <a href="{{ site.baseurl }}/" class="navbar-item">Blog</a>
+            <a href="{{ site.baseurl }}/about" class="navbar-item">About</a>
+          </div>
         </div>
       </div>
     </nav>
 
     <div id="main-section" class="section">
       <div id="main" class="container" role="main">
-        <div class="columns">
-          <div class="column is-9">
-            {{ content }}
-          </div>
-        </div>
+        {{ content }}
       </div>
     </div>
 
@@ -60,13 +69,15 @@
     </footer>
 
     {% include analytics.html %}
-    <script>
-      $('.navbar-burger').on('click', (e) => {
-        // toggle burger is-active
-        $(e.currentTarget).toggleClass('is-active');
-
-        // toggle navbar-menu
-        $('#navMenu').toggleClass('is-active');
+    <script type="text/javascript">
+      $(function(){
+        $('.navbar-burger').on('click', (e) => {
+          // toggle burger is-active
+          $(e.currentTarget).toggleClass('is-active');
+  
+          // toggle navbar-menu
+          $('#navMenu').toggleClass('is-active');
+        })
       })
     </script>
   </body>
