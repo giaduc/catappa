@@ -4,14 +4,21 @@ title: About
 permalink: /about/
 ---
 
-I'm Duc, a programmer interested in HTML, CSS, JS and all about the Web.
+I'm charon, a programmer interested in HTML, CSS, JS and all about the Web.
 
-### Some framework I used
+### Some framework and library I used
+- Bulma
 - Bootstrap
-- React
+- JQuery
+- KnockoutJs
 - Angular
+- ReactJs
+- React Native
+- Redux
+- Nodejs
+- Express
 - ...
 
 ### Contact me
 
-[lgduc1913@gmail.com](mailto:lgduc1913@gmail.com)
+[charon5th@gmail.com](mailto:charon5th@gmail.com)

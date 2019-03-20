@@ -28,8 +28,8 @@
     </script>
   </head>
 
-  <body>
-    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+  <body class="has-navbar-fixed-top">
+    <nav class="navbar is-light is-fixed-top" role="navigation" aria-label="main navigation">
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="{{ site.baseurl }}/">{{ site.name }}</a>
@@ -42,18 +42,6 @@
         </div>
   
         <div class="navbar-menu" id="navMenu">
-          <div class="navbar-start">
-            <div class="navbar-item">
-              <div class="field">
-                <div class="control has-icons-right">
-                  <input id="search" type="text" class="input is-rounded" placeholder="search...">
-                  <span class="icon is-right">
-                    <i class="fas fa-search"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="navbar-end">
             <a href="{{ site.baseurl }}/" class="navbar-item">Blog</a>
             <a href="{{ site.baseurl }}/about" class="navbar-item">About</a>
@@ -63,14 +51,22 @@
     </nav>
 
     <div id="main-section" class="section">
-      <div id="main" class="container" role="main">
+      <div id="main" class="container is-fullheight" role="main">
         {{ content }}
       </div>
     </div>
 
     <footer class="footer">
       <div class="content has-text-centered">
-        {% include svg-icons.html %}
+        <!-- {% include svg-icons.html %} -->
+        <p>
+          <i class="far fa-copyright"></i> 2019 | Developed by charon5h
+        </p>
+        <div>
+          <a href="https://bulma.io">
+            <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+          </a>
+        </div>
       </div>
     </footer>
 
